@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="style.css">
+    <title>exo</title>
+</head>
+<body>
+    <!-- 🍵 button Ajout utilisateur -->
+    <div class="text-center py-3">
+        <button class="btn btn-primary" onclick="showFrmAddUser()">
+        <i class="fa-sharp fa-solid fa-plus"></i> Ajouter un utilisateur
+        </button>
+         <!-- 🍵 button Afficher utilisateur -->
+        <button class="btn btn-primary" onclick="showList()">
+        <i class="fa-solid fa-list-ol"></i> Afficher La Liste
+        </button>
+    </div>
+
+    <!-- formulaire Ajout Ulilisateur -->
+
+    <div class="col-lg-6 mx-auto" role="alert" id="message"></div>
+    
+    <form action="" class=" col-lg-6 mx-auto">
+        <label class="form-label" for="nom">Nom</label>
+        <input id="nom" type="text" class="form-control col-lg-3" placeholder="Entrez Votre Nom">
+        <label class="form-label mt-3" for="profil">Profil</label>
+        <select id="profil" class="form-select" aria-label="Default select example">
+            <option selected>S'electionnez votre Profil</option>
+            <option value="Etudiant">Etudiant</option>
+            <option value="Professuer">Professuer</option>
+            <option value="Admin">Admin</option>
+        </select>
+
+        <div class="text-center mt-3">
+            <button id="btnValider" class="btn btn-primary" onclick="addUser()">Ajouter</button>
+        </div>
+
+        <div class="text-center mt-3">
+            <button id="btnEditer"  class="btn btn-info" onclick="updateUser()">Modifier</button>
+        </div>
+    </form>
+   
+    <!-- Listes des Ulilisateurs -->
+    <div class="container py-5 col-lg-6 text-center">
+    <table id="liste" class="table table-striped ">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nom</th>
+            <th scope="col">Profil</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody class="table-group-divider">
+        </tbody>
+      </table>
+    </div>
+    
+        
+    
+
+    <script src="style.js"></script>
+</body>
+</html>
